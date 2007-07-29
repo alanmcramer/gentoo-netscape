@@ -1,0 +1,52 @@
+--- /usr/libexec/mozilla-launcher	2007-06-29 15:39:12.000000000 +1000
++++ Desktop/mozilla-launcher-1.56	2007-07-29 23:12:21.000000000 +1000
+@@ -29,7 +29,7 @@
+   [[ -n $MOZILLA_LAUNCHER ]] && zero=$MOZILLA_LAUNCHER
+   unset MOZILLA_LAUNCHER
+ 
+-  # Determine if we're called as firefox or mozilla and set up
++  # Determine if we're called as firefox, navigator or mozilla and set up
+   # variables appropriately
+   which_browser || exit 1       # note: modifies $zero
+ 
+@@ -103,7 +103,7 @@
+     else
+       if [[ -n $MOZILLA_NEWTYPE ]]; then
+         try_running "openURL($u,new-$MOZILLA_NEWTYPE)" || retval=$?
+-      elif [[ ( $zero == firefox* || $zero == seamonkey* ) && -n $u ]]; then
++      elif [[ ( $zero == firefox* || $zero == seamonkey* || $zero == navigator* ) && -n $u ]]; then
+         # Don't override preferences set in the browser #82653
+         try_running "openURL($u)" || retval=$?
+       elif [[ -n $u ]]; then
+@@ -134,7 +134,7 @@
+   fi
+ 
+   # Support mozilla, mozilla-bin, firefox, firefox-bin, thunderbird,
+-  # thunderbird-bin!
++  # thunderbird-bin, navigator-bin!
+   # This case statement does the setup for source-based browsers and
+   # just drops through for binary-based browsers.
+   case $zero in
+@@ -191,6 +191,13 @@
+   fi
+ 
+   case $zero in
++    *navigator-bin)
++      export LD_PRELOAD=/usr/lib/libXinerama.so.1
++      export MOZILLA_FIVE_HOME=${MOZILLA_LIBDIR:-"/opt/netscape/navigator"}
++      remote=$MOZILLA_FIVE_HOME/mozilla-xremote-client
++      mozbin=$MOZILLA_FIVE_HOME/navigator-bin
++      ;;
++
+     *fox-bin)
+       export MOZILLA_FIVE_HOME=${MOZILLA_LIBDIR:-"/opt/firefox"}
+       remote=$MOZILLA_FIVE_HOME/mozilla-xremote-client
+@@ -529,7 +536,7 @@
+   fi
+ 
+   # The -bin packages don't support updating the registry, at least not yet.
+-  # regxpcom and regchrome are missing from firefox-bin and thunderbird-bin, and
++  # regxpcom and regchrome are missing from navigator-bin, firefox-bin and thunderbird-bin, and
+   # there should be no need to run mozilla-rebuild-databases.pl with mozilla-bin
+   if [[ ${zero} == *-bin ]]; then
+     echo "$0: update_chrome doesn't support ${zero}"
