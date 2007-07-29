@@ -1,5 +1,5 @@
---- /usr/libexec/mozilla-launcher	2007-06-29 15:39:12.000000000 +1000
-+++ Desktop/mozilla-launcher-1.56	2007-07-29 23:12:21.000000000 +1000
+--- mozilla-launcher-1.56	2007-06-29 15:39:12.000000000 +1000
++++ mozilla-launcher-1.56	2007-07-29 23:12:21.000000000 +1000
 @@ -29,7 +29,7 @@
    [[ -n $MOZILLA_LAUNCHER ]] && zero=$MOZILLA_LAUNCHER
    unset MOZILLA_LAUNCHER
