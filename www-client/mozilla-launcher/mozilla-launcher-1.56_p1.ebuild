@@ -26,7 +26,7 @@ src_unpack() {
 
 src_install() {
 	exeinto /usr/libexec
-	newexe ${P} mozilla-launcher || die
+	newexe ${PN}-1.56 mozilla-launcher || die
 }
 
 pkg_postinst() {
