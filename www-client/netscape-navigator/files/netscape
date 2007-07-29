@@ -1,4 +1,0 @@
-#!/bin/sh
-export MOZ_PLUGIN_PATH=${MOZ_PLUGIN_PATH:-/usr/lib/nsbrowser/plugins}
-export LD_PRELOAD=/usr/lib/libXinerama.so.1 
-/opt/netscape/navigator/navigator
