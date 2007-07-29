@@ -1,0 +1,65 @@
+--- /usr/libexec/mozilla-launcher	2007-06-29 15:39:12.000000000 +1000
++++ Desktop/netscape-launcher-1.56	2007-07-29 22:30:08.000000000 +1000
+@@ -29,7 +29,7 @@
+   [[ -n $MOZILLA_LAUNCHER ]] && zero=$MOZILLA_LAUNCHER
+   unset MOZILLA_LAUNCHER
+ 
+-  # Determine if we're called as firefox or mozilla and set up
++  # Determine if we're called as navigator or mozilla and set up
+   # variables appropriately
+   which_browser || exit 1       # note: modifies $zero
+ 
+@@ -103,7 +103,7 @@
+     else
+       if [[ -n $MOZILLA_NEWTYPE ]]; then
+         try_running "openURL($u,new-$MOZILLA_NEWTYPE)" || retval=$?
+-      elif [[ ( $zero == firefox* || $zero == seamonkey* ) && -n $u ]]; then
++      elif [[ ( $zero == navigator* || $zero == seamonkey* ) && -n $u ]]; then
+         # Don't override preferences set in the browser #82653
+         try_running "openURL($u)" || retval=$?
+       elif [[ -n $u ]]; then
+@@ -133,15 +133,16 @@
+     unset MOZILLA_LIBDIR
+   fi
+ 
+-  # Support mozilla, mozilla-bin, firefox, firefox-bin, thunderbird,
++  # Support mozilla, mozilla-bin, navigator, navigator-bin, thunderbird,
+   # thunderbird-bin!
+   # This case statement does the setup for source-based browsers and
+   # just drops through for binary-based browsers.
+   case $zero in
+-    *fox)
+-      export MOZILLA_FIVE_HOME=${MOZILLA_LIBDIR:-"/usr/lib/MozillaFirefox"}
++    *navigator)
++      export LD_PRELOAD=/usr/lib/libXinerama.so.1 
++      export MOZILLA_FIVE_HOME=${MOZILLA_LIBDIR:-"/opt/netscape/navigator"}
+       remote=$MOZILLA_FIVE_HOME/mozilla-xremote-client
+-      mozbin=$MOZILLA_FIVE_HOME/firefox-bin
++      mozbin=$MOZILLA_FIVE_HOME/navigator-bin
+       ;;
+ 
+     *mozilla)
+@@ -191,10 +192,11 @@
+   fi
+ 
+   case $zero in
+-    *fox-bin)
+-      export MOZILLA_FIVE_HOME=${MOZILLA_LIBDIR:-"/opt/firefox"}
++    *navigator-bin)
++      export LD_PRELOAD=/usr/lib/libXinerama.so.1 
++      export MOZILLA_FIVE_HOME=${MOZILLA_LIBDIR:-"/opt/netscape/navigator"}
+       remote=$MOZILLA_FIVE_HOME/mozilla-xremote-client
+-      mozbin=$MOZILLA_FIVE_HOME/firefox-bin
++      mozbin=$MOZILLA_FIVE_HOME/navigator-bin
+       ;;
+ 
+     *mozilla-bin)
+@@ -529,7 +531,7 @@
+   fi
+ 
+   # The -bin packages don't support updating the registry, at least not yet.
+-  # regxpcom and regchrome are missing from firefox-bin and thunderbird-bin, and
++  # regxpcom and regchrome are missing from navigator-bin and thunderbird-bin, and
+   # there should be no need to run mozilla-rebuild-databases.pl with mozilla-bin
+   if [[ ${zero} == *-bin ]]; then
+     echo "$0: update_chrome doesn't support ${zero}"
