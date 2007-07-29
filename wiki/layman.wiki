@@ -34,3 +34,6 @@ Now it is a case of installing your favourite Netscape software.  Doing the foll
 emerge -s netscape
 }}}
 Good Luck!
+
+===Sources===
+Some of the information on this page was sourced from http://gentoo-wiki.com/TIP_Overlays which has more detail about Overlays in general and how to add additional overlays to your Gentoo installation.
