@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=Netscape Navigator
+Comment=Netscape Navigator is now faster, more secure, and fully customizable to your online life.
+Exec=/usr/bin/netscape %U
+Icon=netscape-navigator-icon.png
+Terminal=false
+Type=Application
+Categories=Application;Network;
+GenericName=
