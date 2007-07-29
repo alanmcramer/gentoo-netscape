@@ -39,3 +39,13 @@ pkg_postinst() {
 		ln -sfn /usr/libexec/mozilla-launcher ${f}
 	done
 }
+
+pkg_postinst(){
+	ewarn "This is a gentoo-netscape patched release from"
+	ewarn "http://gentoo-netscape.googlecode.com/"
+	ewarn ""
+	ewarn "If there are any bugs to report from this package, please"
+	ewarn "visit our site and log a bug there.  Please don't submit"
+	ewarn "any bugs to Gentoo Bugzilla, as we need to firstly ensure"
+	ewarn "the bug isn't a problem with our patch."
+}
