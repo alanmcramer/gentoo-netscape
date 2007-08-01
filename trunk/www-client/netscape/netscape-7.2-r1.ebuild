@@ -14,8 +14,7 @@ RESTRICT="nomirror"
 SLOT="${PV}"
 KEYWORDS="-* ~x86"
 IUSE="aim flash moznomail spell"
-DEPEND="virtual/x11
-	=dev-libs/glib-1.2*
+DEPEND="=dev-libs/glib-1.2*
 	=x11-libs/gtk+-1.2*
 	flash? ( !net-www/netscape-flash )"
 
