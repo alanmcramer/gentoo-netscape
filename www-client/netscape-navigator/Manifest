@@ -20,10 +20,10 @@ EBUILD netscape-navigator-9.0_beta2-r1.ebuild 4134 RMD160 788c3ac8a18764da3711e9
 MD5 77f1e68e4ce49fc697aede9305916bfc netscape-navigator-9.0_beta2-r1.ebuild 4134
 RMD160 788c3ac8a18764da3711e930a22cf0b6f96ec193 netscape-navigator-9.0_beta2-r1.ebuild 4134
 SHA256 8d515d708bd0fa622ca2ee73532741b374061bafdfad85c566f66e9b4f90d62d netscape-navigator-9.0_beta2-r1.ebuild 4134
-EBUILD netscape-navigator-9.0_beta3-r1.ebuild 4134 RMD160 c6b1028693f8658ca1f08f70c0d3a5918bbe123c SHA1 b4165df53abb6e4fae2a131727d9ffce42a0a5f2 SHA256 7384f8270b0441972804ad4d5be97ea32fd22a0823eca52f725b6c657b1db717
-MD5 edf0b176af77cdae06816908cb81149e netscape-navigator-9.0_beta3-r1.ebuild 4134
-RMD160 c6b1028693f8658ca1f08f70c0d3a5918bbe123c netscape-navigator-9.0_beta3-r1.ebuild 4134
-SHA256 7384f8270b0441972804ad4d5be97ea32fd22a0823eca52f725b6c657b1db717 netscape-navigator-9.0_beta3-r1.ebuild 4134
+EBUILD netscape-navigator-9.0_beta3-r1.ebuild 4134 RMD160 86af516215e528435574d2ec5c9f4d2c7659265b SHA1 b7d205e031ca959aa5451ce85953d3ff38bb6385 SHA256 eb922b3a7d7cdd4bd0e3a18478c9b8a93b3716b4a8109b2ccee73bc5ce08daf7
+MD5 245f8fbe57248cc27d7f5ab507430648 netscape-navigator-9.0_beta3-r1.ebuild 4134
+RMD160 86af516215e528435574d2ec5c9f4d2c7659265b netscape-navigator-9.0_beta3-r1.ebuild 4134
+SHA256 eb922b3a7d7cdd4bd0e3a18478c9b8a93b3716b4a8109b2ccee73bc5ce08daf7 netscape-navigator-9.0_beta3-r1.ebuild 4134
 MD5 22cae83af210000893024fe138f1ded2 files/digest-netscape-navigator-9.0_beta2-r1 277
 RMD160 e354b89bee90cce4f21297fadb987ba715cfd50d files/digest-netscape-navigator-9.0_beta2-r1 277
 SHA256 04193a7ed273bef0e2d77deced425a1be0bcd181f2e939439cd267faacc4fe4e files/digest-netscape-navigator-9.0_beta2-r1 277

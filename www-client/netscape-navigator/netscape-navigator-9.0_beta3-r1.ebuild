@@ -78,7 +78,7 @@ pkg_setup() {
 #}
 
 src_unpack() {
-	unpack ${PN}-9.0b2.tar.gz
+	unpack ${PN}-9.0b3.tar.gz
 #
 #	linguas
 #	for X in ${linguas}; do
