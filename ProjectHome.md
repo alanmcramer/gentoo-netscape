@@ -1,0 +1,1 @@
+Providing Ebuilds of Netscape software to Gentoo Users everywhere.  Some people may perfer to use a Netscape branded browser instead of using a Mozilla branded one.
